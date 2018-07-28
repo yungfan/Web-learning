@@ -1,0 +1,15 @@
+p{
+    color: green;
+    font-size: 40px;
+}
+
+#div {
+
+    background-color: green;
+    width:40px ; height: 40px;
+
+}
+
+#div2{
+    margin-left: 30px;margin-top: 30px;
+}

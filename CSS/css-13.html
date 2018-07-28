@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        .menu{
+
+            /*清除浮动 写在前面的盒子*/
+           /* overflow: hidden;*/
+
+
+
+        }
+
+        /*.menu:after{
+
+        	content: "";
+        	display: block;
+        	height: 0;
+        	visibility: hidden;
+        	clear: both;
+
+
+         
+        }*/
+
+        .menu:after,.menu:before{
+
+
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        ul li{
+
+            margin: 15px;
+            float: right;
+
+        }
+
+        a{
+            text-decoration: none;
+
+
+        }
+
+        a:link {color: black}		/* 未访问的链接 */
+        a:visited {color: black}	/* 已访问的链接 */
+        a:hover {color: red}	/* 鼠标移动到链接上 */
+        a:active {color: red}	/* 选定的链接 */
+
+        .container{
+
+            width: 1204px;
+            height: 70px;
+
+            background-color: skyblue;
+            margin: 0 auto;
+            /*清除浮动 写在后面的盒子*/
+           /* clear: right;*/
+
+        }
+
+        .container div{
+
+            width: 240px;
+            background-color: lightpink;
+            height: 70px;
+            float: left;
+
+            text-align: center;
+            line-height: 70px;
+            margin-right: 1px;
+
+        }
+
+        .container div:nth-child(5){
+            margin-right: 0px;
+
+        }
+
+        .container div:hover{
+
+            background-color: skyblue;
+
+
+        }
+
+        .container span{
+
+            font-size: 20px;
+            color: red;
+
+
+        }
+
+        p{
+
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="menu">
+    <ul>
+        <li><a href="#">手机京东</a></li>
+        <li><a href="javascript:void(0);">网站导航</a></li>
+        <li><a href="javascript:void(0);">客户服务</a></li>
+        <li><a href="javascript:void(0);">企业采购</a></li>
+    </ul>
+</div>
+
+
+<div class="container">
+    <div><span>手机新品</span></div>
+    <div><span>手机新品</span></div>
+    <div><span>手机新品</span></div>
+    <div><span>手机新品</span></div>
+    <div><span>手机新品</span></div>
+</div>
+
+
+</body>
+</html>

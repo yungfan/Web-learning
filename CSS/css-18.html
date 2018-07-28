@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+
+
+        ul{
+            width: 800px;
+            margin: 0 auto;  /*必须有高度才可以有效果*/
+            list-style: none;
+            font-size: 20px;
+            margin-top: 50px;
+
+        }
+
+        ul li{
+            float: left;
+            width: 150px;
+            background-color: gray;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+        ul li:nth-child(3){
+
+            background-color: skyblue;
+            position: relative;
+
+        }
+
+
+        /*相对定位由于占用元素的位置，所以不能居中，失败*/
+        /*.img{*/
+
+            /*position: relative;*/
+            /*top:-22px;*/
+            /*left:-40px;*/
+
+
+        /*}*/
+
+        /*看上去好像行，但是一旦窗口的大小进行调整就出现问题。*/
+        /*.img{*/
+
+            /*position: absolute;*/
+            /*top:12px;*/
+            /*left: 412px;*/
+
+        /*}*/
+
+        /*子绝对 父相对*/
+        .img{
+
+        position: absolute;
+
+         /*写死*/
+        /*top:-8px;*/
+        /*left: 64px;*/
+
+        left: 50%;
+        margin-left: -10px;
+        top:-8px;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:link {color: black}		/* 未访问的链接 */
+        a:visited {color: black}	/* 已访问的链接 */
+        a:hover {color: red}	/* 鼠标移动到链接上 */
+        a:active {color: red}	/* 选定的链接 */
+
+
+    </style>
+</head>
+<body>
+
+
+    <ul>
+        <li><a href="#">手机京东</a></li>
+        <li><a href="javascript:void(0);">网站导航</a></li>
+        <li><a href="javascript:void(0);">全球购</a><img class="img" src="images/hot.png"></li>
+        <li><a href="javascript:void(0);">客户服务</a></li>
+        <li><a href="javascript:void(0);">企业采购</a></li>
+    </ul>
+
+
+</body>
+</html>

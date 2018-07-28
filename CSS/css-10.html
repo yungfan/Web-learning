@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--a标签的伪类-->
+    <style type="text/css">
+
+        a:link {color: black}		/* 未访问的链接 */
+        a:visited {color: black}	/* 已访问的链接 */
+        a:hover {color: red}	/* 鼠标移动到链接上 */
+        a:active {color: red}	/* 选定的链接 */
+
+
+        .container{
+
+            width: 1204px;
+            height: 70px;
+
+            background-color: skyblue;
+            margin: 0 auto;
+
+        }
+
+        .container div{
+
+            width: 240px;
+            background-color: chartreuse;
+            height: 70px;
+            float: left;
+
+            text-align: center;
+            line-height: 70px;
+            margin-right: 1px;
+
+        }
+
+        .container div:nth-child(5){
+            margin-right: 0px;
+
+        }
+
+        .container div:hover{
+
+            background-color: skyblue;
+
+
+        }
+
+       .container span{
+
+           font-size: 20px;
+           color: red;
+
+
+       }
+
+    </style>
+
+
+</head>
+<body>
+
+    <a href="http://www.abc.edu.cn">安徽商贸职业技术学院</a>
+
+
+</body>
+</html>

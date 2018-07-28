@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+        .div1{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            float: left;
+            /*此时无效 参考css-13 有子元素时的情况*/
+            /*overflow: hidden;*/
+
+        }
+
+        .div2{
+
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: left;
+            /*clear: both;*/
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="div1"></div>
+
+<div class="div2"></div>
+
+</body>
+</html>

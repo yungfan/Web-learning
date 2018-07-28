@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签学习</title>
+    <base target="_blank">
+</head>
+<body>
+ 
+	<!--controls和autoplay要么不取值 要么取它本身-->
+
+  	<video src="示例视频.mp4" controls="controls" width="640" height="360" poster="Penguins.jpg" loop="1"></video>  <br/>
+
+
+  	<video controls="controls">
+  	     <source src="2.mp4"" type="video/mp4" />
+	</video>
+
+	<br/>
+  
+ 	<audio src="示例音频.mp3" controls="controls"  loop="1" autoplay="autoplay"></audio>
+
+	<!--类似QQ好友列表效果-->
+ 	<details>
+       <summary>这是一个概要信息</summary>
+
+       详细信息在这里显示
+ 	</details>
+
+	<!--虽然可以通过behavior控制类型 但是受loop的影响-->
+ 	<marquee direction="left" scrollamount="20" loop="10" behavior="alternate"><img src="images/buy_button.png" /></marquee>
+
+</body>
+</html>

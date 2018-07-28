@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+     /*1、给想设置css的标签设置一个id属性，id属性不能重复*/
+     /*2、在css代码中，用 #id 的方式选择标签 然后在{}中设置css的属性*/
+
+     #div1{
+            background-color: red;
+            color: white;
+            font-style: italic;
+            font-weight: bolder;
+            font-family: 楷体,微软雅黑,仿宋;
+            font-size: 30px;
+
+     }
+
+     #div2{
+            background-color: blue;
+            color: pink;
+            /*style、weight、size、family*/
+            font:italic bold 20px 隶书;
+
+     }
+
+     #div3{
+            background-color: green;
+            color: indigo;
+            text-decoration: line-through;
+      }
+
+      #ha{
+
+          text-decoration: none;
+
+      }
+
+        #ptext{
+
+         text-indent: 2em;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="div1">安徽商贸</div>
+<div id="div2">职业技术</div>
+<div id="div3">999</div>
+
+<p id="ptext">喜迎十九大，共筑中国梦。举世瞩目的中国共产党第十九次全国代表大会即将开幕之际，由学院图书馆、宣传统战部主办，院团委、思政教学部协办的“辉煌壮丽的史诗——党史图文展”在校图书馆正式启动。学校党委成员、各系部处室负责人、教师党员代表和学生党员代表参加了启动仪式。</p>
+
+<a href="#" id="ha">我是一个超链接</a>
+
+</body>
+</html>

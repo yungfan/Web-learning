@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+        /*通配符元选择器*/
+        *{
+
+            list-style: none;
+
+        }
+
+        /*序选择器*/
+        li:first-child{
+            color: red;
+        }
+
+        li:last-child{
+
+            color: lawngreen;
+
+        }
+
+        li:nth-child(3n+1){
+
+            color: skyblue;
+
+        }
+
+        p:first-of-type{
+
+            color: purple;;
+
+        }
+
+        p:last-of-type{
+
+            color: hotpink;;
+
+        }
+
+        p:nth-of-type(2){
+
+
+            color: green;
+
+        }
+
+        /*属性选择器 中间不能用空格*/
+        input[type="text"]{
+
+            color: red;
+        }
+
+        /*继承性*/
+        .div{
+
+            color: red ;
+
+        }
+
+        /*优先级*/
+        .imp{
+
+            color: red ;
+
+        }
+
+        div{
+
+            color: olivedrab !important;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+   <ul>
+       <li>北京</li>
+       <li>南京</li>
+       <li>东京</li>
+       <li>西京</li>
+       <li>上海</li>
+       <li>北海</li>
+   </ul>
+
+
+   <div>
+   <p>商贸学院1</p>
+   <p>商贸学院2</p>
+
+   <!--不在同一个元素下的同一个元素不属于同一个级别-->
+   <div><p>商贸学院3</p></div>
+   <div><p>商贸学院4</p></div>
+
+   <div class="div"><div><span>商贸学院5</span></div></div>
+
+
+   <div class="imp">商贸学院6</div>
+
+   </div>
+
+
+   <input type="text" />
+
+   <input type="password" />
+
+</body>
+</html>

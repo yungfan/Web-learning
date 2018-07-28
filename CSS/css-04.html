@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+        .divp{
+
+            background-color: red;
+
+            height: 500px;
+
+
+        }
+
+        /*后代选择器*/
+       /*.divp p{*/
+            /*background-color: blue;*/
+            /*height: 100px;*/
+
+        /*}*/
+
+
+        /*子元素选择器*/
+        /*.divp>div>div{*/
+            /*background-color: blue;*/
+            /*height: 100px;*/
+
+        /*}*/
+
+
+        /*兄弟选择器*/
+        .divb {
+
+            background-color: green;
+            height: 100px;
+
+        }
+
+        /*直接兄弟选择器*/
+        /*.divb+div{*/
+
+            /*background-color: blue;*/
+            /*height: 100px;*/
+
+        /*}*/
+
+        /*通用兄弟选择器*/
+        .divb~div{
+
+            background-color: blue;
+            height: 100px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--后代选择器-->
+<!--<div class="divp">-->
+
+    <!--<p>-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--</p>-->
+<!--</div>-->
+
+<!--子元素选择器-->
+<!--<div class="divp">-->
+
+    <!--<div>-->
+        <!--<div></div>-->
+        <!--<p></p>-->
+        <!--<div></div>-->
+    <!--</div>-->
+
+    <!--<p></p>-->
+
+    <!--<div>-->
+        <!--<div></div>-->
+        <!--<p></p>-->
+        <!--<div></div>-->
+    <!--</div>-->
+
+<!--</div>-->
+
+
+
+<!--兄弟选择器-->
+<div class="divp">
+
+    <div class="divb">
+    </div>
+
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

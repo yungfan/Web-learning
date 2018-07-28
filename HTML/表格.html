@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table标签学习</title>
+    <base target="_blank">
+</head>
+<body>
+
+     <table border="1" align="center" cellpadding="10" cellspacing="0" width="800px" >
+        <caption>九九乘法表</caption>
+
+        <!--在tr中 真正的列数=没有跨度的td的个数+有跨度的td中的colspan的值-->
+        <!--rowspan的值n决定了后面的n-1个tr都需要进行相应的调整-->
+        <!--上面的tr中有colspan和rowspan的时候需要进行计算  本tr中的td个数=本身5列 - rowspan的个数 - colspan的值-->
+		<tr>
+        	<th>星期1</th>
+        	<th>星期2</th>
+        	<th>星期3</th>
+        	<th>星期4</th>
+        	<th>星期5</th>
+        	<th>星期6</th>
+        	<th>星期7</th>
+
+        </tr>
+
+    <!--由于行是直接包含在table下面 所以一旦要跨行rowspan的时候 要在紧跟着当前行的后面的相应数量的行里面删除掉跨越的列数-->  
+        <tr align="center" bgcolor="#F00">
+        	<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td bgcolor="#0F0" rowspan="3" colspan="4">4</td>
+
+        </tr>
+
+		<tr>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        
+        	
+		</tr>
+ 	<!--由于列是包含在一行里面的 所以一旦要跨列colspan的时候 很简单 直接在tr里面删除掉相应数量的td即可-->
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td colspan="5">3</td>
+
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	<td>5</td>
+        	<td>6</td>
+        	<td>7</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	<td>5</td>
+        	<td>6</td>
+        	<td>7</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	<td>5</td>
+        	<td>6</td>
+        	<td>7</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	<td>5</td>
+        	<td>6</td>
+        	<td>7</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+        	<td>2</td>
+        	<td>3</td>
+        	<td>4</td>
+        	<td>5</td>
+        	<td>6</td>
+        	<td>7</td>
+		</tr>
+
+     </table>
+
+
+</body>
+</html>

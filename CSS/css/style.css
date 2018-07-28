@@ -1,0 +1,113 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.heading,
+.container,
+.footing{
+    margin: 10px auto;
+}
+
+.heading{
+    height: 100px;
+    background-color: red;
+}
+.left,
+.right,
+.main{
+    height: 300px;
+    background-color: yellow;
+}
+.footing{
+    height: 100px;
+    background-color: gray;
+}
+
+/*@media  [only|all] 媒体类型（很多种 用得最多的是screen：用于电脑屏幕，平板电脑，智能手机等 ） [and or not] 媒体功能 {*/
+
+/*}*/
+
+/*1、有多少个不同的@media，网页在显示的时候就有多少种显示的状态*/
+/*2、@media 里面写的css会匹配到不同的媒体类型和媒体功能，但是没有写在里面的css，会默认匹配到无@media修饰的css，造成css的层叠*/
+
+@media screen and (min-width: 960px){
+     .heading,
+     .container,
+     .footing{
+         width:960px;
+
+      }
+    .left,
+    .main,
+    .right{
+        float: left;
+        height: 500px;
+    }
+    .left,
+    .right{
+        width:200px;
+
+    }
+    .main{
+        margin: 0px 5px;
+        width:550px;
+    }
+    .container{
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px){
+    .heading,
+    .container,
+    .footing{
+        width: 600px;
+
+    }
+    .left,
+    .main{
+        float: left;
+        height:400px;
+
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        width: 160px;
+
+    }
+    .main{
+        width: 435px;
+        margin-left: 5px;
+    }
+    .container{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .heading,
+    .container,
+    .footing{
+        width: 400px;
+    }
+    .left,
+    .right{
+        width: 400px;
+        height: 100px;
+    }
+
+    .main{
+        margin-top: 10px;
+        width:400px;
+        height:200px;
+    }
+    .right{
+        margin-top: 10px;
+
+    }
+    .container{
+        height: 420px;
+    }
+}

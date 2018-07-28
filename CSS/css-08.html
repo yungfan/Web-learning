@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css" >
+
+        .p1{
+
+            /*分别设置边框*/
+            border-right: 5px solid red;
+            border-left: 5px solid red;
+            display: inline-block;
+
+        }
+
+        .p2{
+
+            /*统一设置  上 右 下 左*/
+            border-width: 1px 2px 3px 4px;
+            border-style: solid dotted dashed double;
+            border-color: red blue green skyblue;
+
+            display: inline-block;
+        }
+
+
+        .p3{
+
+              /*统一设置  当只有三个元素的时候 第二个属性同时设置左右 第一和第三分别对应上下*/
+              border-width: 1px 2px 3px;
+              border-style: solid dotted dashed;
+              border-color: red blue green;
+
+              display: inline-block;
+          }
+
+        .p4{
+
+            /*统一设置  当只有二个元素的时候 第一个属性同时设置上下 第二个分别对应左右*/
+            border-width: 1px 2px;
+            border-style: solid dotted;
+            border-color: red blue;
+
+            display: inline-block;
+        }
+
+        .p5{
+
+            /*同p1*/
+            border-width: 1px;
+            border-style: solid;
+            border-color: red;
+
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<p class="p1">这是第一段文字</p>
+
+<p class="p2">这是第二段文字</p>
+
+<p class="p3">这是第三段文字</p>
+
+<p class="p4">这是第四段文字</p>
+
+<p class="p5">这是第五段文字</p>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>栅格系统-03</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<!--列偏移-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="background-color: red">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4" style="background-color: red">.col-md-4 .col-md-offset-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-3" style="background-color: green">.col-md-3 .col-md-offset-3</div>
+        <div class="col-md-3 col-md-offset-3" style="background-color: green">.col-md-3 .col-md-offset-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-6" style="background-color: blue">.col-md-6 .col-md-offset-3</div>
+    </div>
+</div>
+
+<!--列嵌套-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" style="background-color: deepskyblue">
+            <!--下面这个row的总宽度是由它的父元素的宽度决定的-->
+            <div class="row">
+                <div class="col-md-4" style="background-color: purple">列嵌套 col-md-4</div>
+                <div class="col-md-4" style="background-color: orange">列嵌套 col-md-4</div>
+                <div class="col-md-4" style="background-color: green">列嵌套 col-md-4</div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-4" style="background-color: deepskyblue">
+
+            <div class="row">
+                <div class="col-md-4" style="background-color: purple">col-md-4</div>
+                <div class="col-md-4" style="background-color: orange">col-md-4</div>
+                <div class="col-md-4" style="background-color: green">col-md-4</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4" style="background-color: purple">列嵌套 col-md-4</div>
+        <div class="col-md-4" style="background-color: orange">列嵌套 col-md-4</div>
+        <div class="col-md-4" style="background-color: green">列嵌套 col-md-4</div>
+    </div>
+</div>
+
+
+<!--列排序-->
+
+<div class="container">
+    <div class="row">
+
+        <!--push相当于往右偏移-->
+        <div class="col-md-9 col-md-push-3" style="background-color: darkolivegreen">.col-md-9 .col-md-push-3</div>
+        <!--pull相当于往左偏移-->
+        <div class="col-md-3 col-md-pull-9" style="background-color: darkolivegreen">.col-md-3 .col-md-pull-9</div>
+    </div>
+</div>
+
+</body>
+</html>
