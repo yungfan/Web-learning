@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .box {
+
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+            padding: 10px 20px;
+            margin: 20px 40px;
+
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //元素本身的宽高
+            //alert($("#box").width()) //500
+            //alert($("#box").height()) //400
+
+            //元素本身的宽高+内边距
+            //alert($("#box").innerWidth()) //540
+            //alert($("#box").innerHeight()) //420
+
+
+            //元素本身的宽高+内边距+边框
+            //alert($("#box").outerWidth()) //542
+            //alert($("#box").outerHeight()) // 422
+
+            //元素本身的宽高+内边距+边框+外边距
+            alert($("#box").outerWidth(true)) //622
+            alert($("#box").outerHeight(true)) //462
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<div id="box" class="box">
+
+    本案例是测试jQuery获取盒子的尺寸
+
+</div>
+
+
+</body>
+</html>

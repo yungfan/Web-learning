@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .hb {
+
+            height: 500px;
+            background-color: red;
+
+        }
+
+        .wm {
+
+            width: 500px;
+            margin: 0 auto;
+
+        }
+
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //添加
+            $("#btnAdd").click(function(){
+
+                $("#box").addClass("hb wm")
+
+            })
+
+            //删除
+            $("#btnRemove").click(function(){
+
+                $("#box").removeClass("wm")
+
+            })
+
+            //切换
+            $("#btnToggle").click(function(){
+
+                $("#box").toggleClass("hb wm")
+
+            })
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<div id="box">
+
+</div>
+
+
+<button id="btnAdd">添加CSS</button>
+<button id="btnRemove">删除CSS</button>
+<button id="btnToggle">切换CSS</button>
+
+</body>
+</html>

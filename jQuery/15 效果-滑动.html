@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        body{
+
+            background-color: #e5eecc;
+        }
+
+
+        /*菜单的css*/
+        .container {
+
+            padding: 0px 8%;
+            height: 50px;
+            background-color: #0168B7;
+        }
+
+        /*9个菜单*/
+        .container>div {
+
+            float: left;
+            line-height:50px;
+            text-align: center;
+            width: 11%;
+        }
+
+        .container>div:hover{
+
+            background-color: goldenrod;
+        }
+
+        .container>div a{
+
+            color: white;
+            text-decoration: none;
+        }
+
+        .container>div:hover a{
+
+            color: black;
+        }
+
+        /*滑动菜单的css*/
+        .panel
+        {
+            background-color:rgba(255,255,255,0.3);
+            display:none;
+            padding: 0px 8%;
+            height: 350px;
+
+        }
+
+        .panel>div {
+
+            float: left;
+            width: 11%;
+        }
+
+        /*ul的内容与上面的菜单对齐*/
+        .panel ul{
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+        }
+
+        .panel li {
+            margin: 15px 0;
+        }
+
+        .panel a {
+
+            text-decoration: none;
+            color: black;
+        }
+
+        .panel a:hover {
+            color: goldenrod;
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //toggle滑动菜单
+            $("#container").children().click(function(){
+
+
+                $("#panel").slideToggle(1000)
+            })
+
+            //滑动菜单下面的超链接点击事件
+            $("#panel a").click(function(){
+
+                window.open("https://www.abc.edu.cn", '_blank');
+
+            })
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+
+
+<div class="container" id="container">
+
+    <div><a href="#">走进安商</a></div>
+    <div><a href="#">系部专业</a></div>
+    <div><a href="#">机构设置</a></div>
+    <div><a href="#">招生就业</a></div>
+    <div><a href="#">人才培养</a></div>
+    <div><a href="#">科学研究</a></div>
+    <div><a href="#">学生工作</a></div>
+    <div><a href="#">合作交流</a></div>
+    <div><a href="#">校园生活</a></div>
+
+</div>
+
+<div id="panel" class="panel">
+
+    <div>
+        <ul>
+            <li><a href="#">学校概况</a></li>
+            <li><a href="#">安商标识</a></li>
+            <li><a href="#">百年校史</a></li>
+            <li><a href="#">安商映像</a></li>
+            <li><a href="#">党政分工</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">会计系</a></li>
+            <li><a href="#">经济贸易系</a></li>
+            <li><a href="#">工商管理系</a></li>
+            <li><a href="https://www.abc.edu.cn/dzxxgcx/">电子信息工程系</a></li>
+            <li><a href="#">艺术设计系</a></li>
+            <li><a href="#">人文外语系</a></li>
+            <li><a href="#">思政系</a></li>
+            <li><a href="#">体育系</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">党群组织</a></li>
+            <li><a href="#">行政部门</a></li>
+            <li><a href="#">教辅部门</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">招生就业</a></li>
+            <li><a href="#">招生信息</a></li>
+            <li><a href="#">就业信息</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">教学公告</a></li>
+            <li><a href="#">教学新闻</a></li>
+            <li><a href="#">学生服务</a></li>
+            <li><a href="#">教师服务</a></li>
+            <li><a href="#">实习实训</a></li>
+            <li><a href="#">校企合作</a></li>
+            <li><a href="#">教学督导</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">科研公告</a></li>
+            <li><a href="#">项目管理</a></li>
+            <li><a href="#">制度文件</a></li>
+            <li><a href="#">科研服务</a></li>
+            <li><a href="#">创新平台</a></li>
+            <li><a href="#">商贸学报</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">思想引导</a></li>
+            <li><a href="#">学生管理</a></li>
+            <li><a href="#">资助工作</a></li>
+            <li><a href="#">心理咨询</a></li>
+            <li><a href="#">学子风采</a></li>
+            <li><a href="#">团情在线</a></li>
+            <li><a href="#">团学组织</a></li>
+            <li><a href="#">素质拓展</a></li>
+            <li><a href="#">学子心声</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">合作动态</a></li>
+            <li><a href="#">合作项目</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="#">电话黄页</a></li>
+            <li><a href="#">商贸校历</a></li>
+            <li><a href="#">教务系统</a></li>
+            <li><a href="#">电子政务</a></li>
+            <li><a href="#">信息资源</a></li>
+            <li><a href="#">后勤服务</a></li>
+            <li><a href="#">财务平台</a></li>
+            <li><a href="#">人事系统</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+</body>
+</html>

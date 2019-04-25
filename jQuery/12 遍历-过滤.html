@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .box {
+
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+
+        }
+
+        .box2 {
+
+            height: 300px;
+            width: 400px;
+            border: 1px solid blue;
+
+
+        }
+
+        .box3 {
+
+            height: 200px;
+            width: 300px;
+            border: 1px solid yellow;
+
+
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+//            $("#big").siblings().first().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//            })
+
+
+//            $("#big").siblings().last().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//            })
+
+
+            //eq参数是索引的意思 从0开始
+//            $("#big").siblings().eq(0).css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//            })
+
+//            $("#big").siblings().filter(".box2").css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//            })
+
+            //与filter相反
+            $("#big").siblings().not(".box2").css({
+
+                "color":"green",
+                "border":"2px solid green"
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+<p id="big">我是老大</p>
+
+<div id="box" class="box">
+    <p>我是box</p>
+</div>
+
+
+<div id="box2" class="box2">
+    <p>我是box2</p>
+</div>
+
+
+<div id="box3" class="box3">
+    <p>我是box3</p>
+</div>
+
+<p>我是老小</p>
+
+</body>
+</html>

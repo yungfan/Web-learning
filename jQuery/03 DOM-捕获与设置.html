@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //alert($("#box").text())
+
+            //$("#box").text("987654321")
+
+            //$("#box").html("987<ins>654</ins>321")
+            //alert($("#box").html())
+
+
+            //$("#name").val("zhangsan")
+            //$("#pass").val("123456")
+
+            $("#btn").click(function(){
+
+
+                var $name = $("#name").val()
+                var $pass = $("#pass").val()
+
+                if($name == "zhangsan" && $pass == "123456") {
+
+                    alert("用户名密码正确")
+                }
+
+                else {
+
+                    alert("Error")
+                }
+            })
+
+
+            //alert($("#bd").attr("href"))
+
+            $("#bd").attr("href", "https://www.abc.edu.cn")
+        })
+
+
+    </script>
+</head>
+<body>
+
+<input id="name" type="text">
+<input id="pass" type="password">
+<button id="btn">登录</button>
+
+<div id="box"><p>123<strong>456</strong>789</p></div>
+
+<a href="http://www.baidu.com" id="bd">baidu</a>
+</body>
+</html>

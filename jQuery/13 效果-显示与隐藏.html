@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            $("#show").click(function(){
+
+                $("#content").show(3000, "linear", function(){
+
+                    alert("显示完成")
+
+                })
+
+            })
+
+            $("#hide").click(function(){
+
+                $("#content").hide(3000, "swing", function(){
+
+                    alert("隐藏完成")
+                })
+
+            })
+
+            $("#toggle").click(function(){
+
+                $("#content").toggle(2000, "swing")
+
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+
+<p id="content">这是一段文本，可以通过hide/show控制显示与隐藏</p>
+
+<input type="button" id="show" value="显示">
+<input type="button" id="hide" value="隐藏">
+<input type="button" id="toggle" value="交互显示">
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .box {
+
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+
+        }
+
+        .box2 {
+
+            height: 300px;
+            width: 400px;
+            border: 1px solid blue;
+
+
+        }
+
+        .box3 {
+
+            height: 200px;
+            width: 300px;
+            border: 1px solid yellow;
+
+
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //children() 直接子元素
+            //$("#box").children().css({"color":"green","border":"2px solid green"});
+
+            //find必须传参数 查找所有传 *
+            $("#box").find("*").css({"color":"green","border":"2px solid green"});
+
+            //children里面的选择器 用标签选择器
+            //$("#box").children("div").css({"color":"green","border":"2px solid green"});
+
+
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<div id="box" class="box">
+
+    <p>我是中间结点</p>
+
+    <div id="box2" class="box2">
+
+        <div id="box3" class="box3">
+
+            <p id="leaf">我是叶子结点</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

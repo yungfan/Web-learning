@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .box {
+
+            height: 500px;
+            background-color: red;
+
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //alert($("#box").css("height"))
+
+            //$("#box").css("height", "200px")
+
+            //推荐使用方式
+            $("#box").css({
+
+                "background-color":"yellow",
+                "height":"300px"
+
+
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<div id="box" class="box">
+
+</div>
+
+
+</body>
+</html>

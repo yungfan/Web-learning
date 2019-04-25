@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+            //显示
+            $("#btn1").click(function(){
+
+                $("#div1").fadeIn(3000)
+            })
+
+
+            //消失
+            $("#btn2").click(function(){
+
+                $("#div2").fadeOut(3000)
+            })
+
+
+            //切换
+            $("#btn3").click(function(){
+
+                $("#div3").fadeToggle(1000)
+            })
+
+
+
+            $("#btn4").click(function(){
+
+                $("#div4").fadeTo("slow", 0.5, function(){
+
+                    alert("fadeTo complete")
+
+                })
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<div id="div4" style="width:80px;height:80px;background-color:yellow;"></div>
+
+
+
+<button id="btn1">fadeIn</button>
+<button id="btn2">fadeOut</button>
+<button id="btn3">toggle</button>
+<button id="btn4">fadeTo</button>
+
+</body>
+</html>

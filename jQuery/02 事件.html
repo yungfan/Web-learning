@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        body {
+
+            height: 1500px;
+            background-color: red;
+
+        }
+
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        //文档就绪事件
+        $(function(){
+
+            $("#name").keypress(function(){
+
+                alert("keypress");
+            })
+
+            $("#name").keydown(function(){
+
+                alert("keydown");
+            })
+
+            $("#name").keyup(function(){
+
+                alert("keyup");
+            })
+
+            $("#pid").hover(function(){
+
+                alert("in");
+
+            }, function(){
+
+                alert("out");
+            })
+
+            $("#name").change(function(){
+                alert("文本已被修改");
+            });
+
+            $("#name").focus(function(){
+                alert("输入框获得了焦点");
+            });
+
+            $("#name").blur(function(){
+                alert("输入框失去了焦点");
+            });
+
+            $(window).resize(function(){
+                alert("窗口大小已经改变");
+            });
+
+            $(window).scroll(function(){
+                alert("窗口滚动");
+            });
+        });
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+
+<p id="pid">这是一段文本</p>
+
+
+输入你的名字: <input type="text" id="name">
+
+
+</body>
+</html>

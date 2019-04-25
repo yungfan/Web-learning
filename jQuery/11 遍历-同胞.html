@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+
+        .box {
+
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+
+        }
+
+        .box2 {
+
+            height: 300px;
+            width: 400px;
+            border: 1px solid blue;
+
+
+        }
+
+        .box3 {
+
+            height: 200px;
+            width: 300px;
+            border: 1px solid yellow;
+
+
+        }
+
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+
+// 前后兄弟都算上
+//            $("#box2").siblings().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//
+//            })
+
+
+//            $("#big").next().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//
+//            })
+
+            // 只会找后面的兄弟
+//            $("#box2").nextAll().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//
+//            })
+
+//            $("#box2").prev().css({
+//
+//                "color":"green",
+//                "border":"2px solid green"
+//
+//            })
+
+
+            $("#box2").prevAll().css({
+
+                "color":"green",
+                "border":"2px solid green"
+
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+<p id="big">我是老大</p>
+
+<div id="box" class="box">
+    <p>我是box</p>
+</div>
+
+
+<div id="box2" class="box2">
+    <p>我是box2</p>
+</div>
+
+
+<div id="box3" class="box3">
+    <p>我是box3</p>
+</div>
+
+<p>我是老小</p>
+
+</body>
+</html>

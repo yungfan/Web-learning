@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style type="text/css">
+    </style>
+
+    <script src="js/jQuery3.3.1.js"></script>
+    <script>
+
+        $(function() {
+//默认情况下，所有 HTML 元素都有一个静态位置，且无法移动。
+//如需对位置进行操作，要记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute！
+
+            $("#btn1").click(function(){
+
+                $("#redDiv").animate({left:'100px'}, 2000, function(){
+
+                    alert("动画执行完毕")
+
+                })
+
+            })
+
+
+
+            $("#btn2").click(function(){
+
+                //同时完成
+                $("#redDiv").animate({
+
+                    left:'100px',
+                    opacity:'0.5',
+                    height:'160px',
+                    width:'160px'
+
+
+                }, 2000)
+
+            })
+
+
+
+            $("#btn3").click(function(){
+
+                //按顺序完成
+                $("#redDiv").animate({
+
+                    left:'100px'
+
+                }, 500)
+
+                $("#redDiv").animate({
+
+                    opacity:'0.5'
+
+                }, 500)
+
+                $("#redDiv").animate({
+
+                    height:'160px'
+
+                }, 500)
+
+                $("#redDiv").animate({
+
+                    width:'160px'
+
+                }, 500)
+
+            })
+
+
+
+            $("#btn4").click(function(){
+
+                //同时完成
+                $("#redDiv").animate({
+
+                    left:'100px',
+                    opacity:'0.5',
+                    height:'+=20px',
+                    width:'+=20px'
+
+                }, 2000)
+
+
+            })
+
+
+            $("#btn5").click(function(){
+
+
+                //只是暂停 动画执行的位置还会保留，当重新执行动画的时候会继续执行
+                $("#redDiv").stop()
+
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+<button id="btn1">动画1</button>
+<button id="btn2">动画2</button>
+<button id="btn3">动画3</button>
+<button id="btn4">动画4</button>
+
+<button id="btn5">停止动画</button>
+
+
+<div id="redDiv" style="width:80px;height:80px;background-color:red;margin-top:20px;position:relative;"></div>
+
+
+
+
+</body>
+</html>
