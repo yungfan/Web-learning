@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script src="js/jQuery3.4.js"></script>
+    <script>
+
+        //文档就绪事件
+        $(function () {
+
+            $("#btn").click(function () {
+
+
+                //第一种
+                //$("#testContent").load("./resources/test.txt");
+
+
+//                $("#testContent").load("./resources/test.html", function(responseTxt,statusTxt,xhr){
+//
+//                    if(statusTxt=="success")
+//
+//                        alert("外部内容加载成功!");
+//
+//                    if(statusTxt=="error")
+//
+//                        alert("Error: "+xhr.status+": "+xhr.statusText);
+//                });
+
+
+                //第二种
+//                $.get("./resources/test.txt", function(data, status){
+//
+//                    alert("数据: " + data + "\n状态: " + status);
+//
+//                    $("#testContent").html(data);
+//
+//                })
+
+
+                //第三种
+                $.post("./resources/test.json", {
+
+                    name: "abc",
+                    url: "https://www.abc.edu.cn"
+
+                }, function (data, status) {
+
+                    var employees = data["employees"];
+
+                    $.each(employees, function (index, item) {
+
+                        alert(item["firstName"] + " " + item["lastName"]);
+
+                    });
+
+                })
+
+                //第四种
+//                $.ajax({
+//
+//                    type:"GET",
+//
+//                    dataType:"json",
+//
+//                    url: "./resources/test.json",
+//
+//                    success: function(data){
+//
+//                        alert("数据: " + data["employees"][0]["firstName"]);
+//                    }
+//                });
+
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+
+<div id="testContent"></div>
+
+<button id="btn">Ajax</button>
+
+</body>
+</html>

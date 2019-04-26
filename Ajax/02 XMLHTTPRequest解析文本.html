@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01 XMLHTTPRequest对象初始化</title>
+
+    <script>
+
+        function createXMLHTTPRequest() {
+            var xmlHTTPRequest;
+
+            if (window.XMLHttpRequest) {
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlHTTPRequest = new XMLHttpRequest();
+            }
+            else {
+                // IE6, IE5 浏览器执行代码
+                xmlHTTPRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            return xmlHTTPRequest;
+        }
+
+        function sendRequest() {
+
+            var xmlHTTPRequest = createXMLHTTPRequest();
+
+            //请求过程中发生的回调
+            xmlHTTPRequest.onreadystatechange = function () {
+
+
+                if (xmlHTTPRequest.readyState == 4) {
+
+                    //alert(xmlHTTPRequest.responseText)
+
+                    document.getElementById("testContent").innerText = xmlHTTPRequest.responseText;
+                }
+
+            }
+
+            //发送具体的网络请求
+            //第一个参数是请求的方法
+            //第二个参数是请求的url
+            //第三个参数是请求是否异步
+            xmlHTTPRequest.open("GET", "./resources/test.txt", true);
+            //真正发送出去
+            xmlHTTPRequest.send();
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div id="testContent"></div>
+
+<button onclick="sendRequest();">Ajax</button>
+
+</body>
+</html>
