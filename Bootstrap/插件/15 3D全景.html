@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全景图预览</title>
+    <style>
+    </style>
+
+    <!--<script src="../js/jQuery.js"></script>-->
+    <!--<script src="../js/bootstrap.min.js"></script>-->
+    <!--<script src="../js/three.min.js"></script>-->
+    <!--<script src="../js/photo-sphere-viewer.min.js"></script>-->
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>-->
+    <script src="https://os.alipayobjects.com/rmsportal/gvmIzdKRFvEjPqTBGyGe.js"></script>
+    <script src="https://os.alipayobjects.com/rmsportal/gtITtPAuXpBIkABlxHkS.js"></script>
+
+</head>
+<body>
+
+<div id="container" style="margin: 0 auto;width:800px;height:500px;"></div>
+
+<script>
+
+   window.onload = function () {
+
+       var div = document.getElementById('container');
+       var PSV = new PhotoSphereViewer({
+           panorama: '../images/lab.jpg',
+           container: div,
+           time_anim: 1000,
+           navbar: true,
+           navbar_style: {
+               backgroundColor: 'rgba(58, 67, 77, 0.7)'
+           },
+           size: {
+               width: '800px',
+               height: '500px'
+           }
+       });
+   };
+
+    // $(function () {
+    //
+    //     var div = $("#container")[0];
+    //     var PSV = new PhotoSphereViewer({
+    //         panorama: '../images/lab.jpg',
+    //         container: div,
+    //         time_anim: false,
+    //         navbar: true,
+    //         navbar_style: {
+    //             backgroundColor: 'rgba(58, 67, 77, 0.7)'
+    //         },
+    //         size: {
+    //             width: '800px',
+    //             height: '500px'
+    //         }
+    //     });
+    //
+    // })
+</script>
+</body>
+</html>

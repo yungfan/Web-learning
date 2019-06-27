@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        nav {
+
+            background-color: rebeccapurple;
+        }
+
+        .nav-pills > li > a {
+            color: white;
+        }
+
+
+    </style>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<!--导航菜单-->
+<div id="navbar">
+    <nav>
+        <ul class="nav nav-pills nav-justified">
+            <!--li里面引用具体的元素的id-->
+            <li><a href="#ios">iOS</a></li>
+            <li><a href="#svn">SVN</a></li>
+            <li><a href="#spring">Spring</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--滚动监听 data-target引用的是菜单的父元素-->
+<!--无论何种实现方式，滚动监听都需要被监听的组件是 position: relative; 即相对定位方式。-->
+<div data-spy="scroll" data-target="#navbar"
+     style="width:300px;height:100px;overflow:auto;position: relative; margin: 0 auto;">
+
+    <h4 id="ios">iOS</h4>
+    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+        TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
+    </p>
+
+    <h4 id="svn">SVN</h4>
+    <p>Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由 CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software
+        Foundation 的一个项目，因此拥有丰富的开发人员和用户社区。
+    </p>
+
+    <h4 id="spring">Spring</h4>
+    <p>Spring 框架是一个开源的 Java 平台，为快速开发功能强大的 Java 应用程序提供了完备的基础设施支持。Spring 框架最初是由 Rod Johnson 编写的，在 2003 年 6 月首次发布于 Apache 2.0 许可证下。
+    </p>
+</div>
+
+
+<!--监听滚动的切换-->
+<!--每当一个新项目被滚动监听激活时，触发该事件。-->
+<script>
+    $(function () {
+
+        $('#navbar').on('activate.bs.scrollspy', function () {
+
+            alert("activate.bs.scrollspy")
+
+        })
+    });
+</script>
+</body>
+</html>

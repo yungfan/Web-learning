@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+<!--基本使用-->
+<form class="form-inline">
+
+    <!--设置了 .form-control 类的 <input>、<textarea> 和 <select> 元素都将被默认设置宽度属性为 width: 100%; -->
+    <!--将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。-->
+    <div class="form-group">
+        <!--for与下面的id配对-->
+        <label for="exampleInputEmail1">Email address</label>
+
+        <!--输入框组-->
+        <div class="input-group">
+
+            <!--额外添加的图标-->
+            <div class="input-group-addon">www.</div>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <div class="input-group-addon">.com</div>
+
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+
+        <!--control-label form-control 被 has-success修饰以后 就会一起变色-->
+        <label for="exampleInputPassword1" class="control-label">Password</label>
+        <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile">
+        <p class="help-block">Example block-level help text here.</p>
+    </div>
+
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess2">Input with success</label>
+        <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+    </div>
+
+    <!--只有一个时不需要form-group-->
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Check me out
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+</form>
+</body>
+</html>

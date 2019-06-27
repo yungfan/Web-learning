@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全景图预览</title>
+    <script src="https://os.alipayobjects.com/rmsportal/gvmIzdKRFvEjPqTBGyGe.js"></script>
+    <script src="https://os.alipayobjects.com/rmsportal/gtITtPAuXpBIkABlxHkS.js"></script>
+
+</head>
+<body>
+
+<p id="threed" style="margin:0 auto;width:1000px;height:600px;"></p>
+
+<script>
+   window.onload = function () {
+       var content = document.getElementById('threed');
+       var psv = new PhotoSphereViewer({
+           panorama: '../images/lab.jpg',
+           container: content,
+           time_anim: 1000,
+           navbar: true,
+           navbar_style: {
+               backgroundColor: 'rgba(58, 67, 77, 0.7)'
+           },
+           size: {
+               width: '1000px',
+               height: '600px'
+           }
+       });
+
+   };
+</script>
+</body>
+</html>

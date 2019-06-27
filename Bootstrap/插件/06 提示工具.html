@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+
+    </style>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<h4>提示工具（Tooltip）插件 - 超链接</h4>
+
+这是一个 <a href="#" data-toggle="tooltip" title="默认的 Tooltip">
+    默认的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="left" title="左侧的 Tooltip">
+    左侧的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="top"
+        title="顶部的 Tooltip">
+    顶部的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="底部的 Tooltip">
+    底部的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="right"
+        title="右侧的 Tooltip">
+    右侧的 Tooltip
+</a>
+
+
+<h4>提示工具（Tooltip）插件 - 按钮</h4>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        title="默认的 Tooltip">
+    默认的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="left" title="左侧的 Tooltip">
+    左侧的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="top" title="顶部的 Tooltip">
+    顶部的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="bottom" title="底部的 Tooltip">
+    底部的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="right" title="右侧的 Tooltip">
+    右侧的 Tooltip
+</button>
+
+<!--data-trigger 触发器  click| hover | focus | manual-->
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="right" title="点击才会出现" data-trigger="click">
+    点击才会出现的 Tooltip
+</button>
+
+<!--改变提示文字大小-->
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="bottom" title="<h3>改变文字大小</h3>">
+    改变文字大小的 Tooltip
+</button>
+
+<!--提示工具（Tooltip）插件不像之前所讨论的其他插件，它不是纯 CSS 插件。
+如需使用该插件，您必须使用 jquery 激活它（读取 javascript）。
+使用下面的脚本来启用页面中的所有的提示工具（tooltip）-->
+<script>
+
+    $(function () {
+
+        //一定在tooltip()之前调用，否则没有效果
+        $("button").tooltip({html: true, placement: "bottom"});
+
+        //必须最后调用
+        $("[data-toggle='tooltip']").tooltip();
+
+        //监听
+//        $('button').on('show.bs.tooltip', function () {
+//            alert("show");
+//        });
+//        $('button').on('shown.bs.tooltip', function () {
+//            alert("shown");
+//        });
+//        $('button').on('hide.bs.tooltip', function () {
+//            alert("hide");
+//        });
+//        $('button').on('hidden.bs.tooltip', function () {
+//            alert("hidden");
+//        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        /*选中时的背景色*/
+        .list-group-item.active {
+            background-color: purple;
+            border-color: purple;
+        }
+
+        /*选中的时候鼠标移动上去时的背景色*/
+        .list-group-item.active:hover {
+            background-color: rebeccapurple;
+            border-color: rebeccapurple;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Cras justo odio <span class="badge">1</span></li>
+        <li class="list-group-item active">Dapibus ac facilisis in  <span class="badge">2</span></li>
+        <li class="list-group-item">Morbi leo risus <span class="badge">3</span></li>
+        <li class="list-group-item">Porta ac consectetur ac  <span class="badge">4</span></li>
+        <li class="list-group-item">Vestibulum at eros <span class="badge">5</span></li>
+    </ul>
+
+
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            Cras justo odio
+        </a>
+        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
+    </div>
+
+    <div class="list-group">
+        <button type="button" class="list-group-item disabled">
+
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">List group item heading Details</p>
+
+        </button>
+        <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+        <button type="button" class="list-group-item">Morbi leo risus</button>
+        <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+        <button type="button" class="list-group-item">Vestibulum at eros</button>
+    </div>
+
+</div>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
