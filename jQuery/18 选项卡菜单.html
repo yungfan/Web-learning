@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0
+			}
+			
+			.container {
+				border: 1px red solid;
+				margin: 0 auto;
+				width: 600px;
+				height: 350px;
+			}
+			
+			.content {
+				width: 540px;
+				height: 300px;
+				background-color: green;
+				float: left;
+				padding: 30px;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			ul li {
+				color: white;
+				float: left;
+				width: 200px;
+				height: 50px;
+				background-color: red;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			.active {
+				background-color: blueviolet;
+			}
+		</style>
+
+		 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<ul>
+				<li>头条</li>
+				<li>体育</li>
+				<li>娱乐</li>
+			</ul>
+			
+			
+
+			<div class="content">
+
+			</div>
+
+		</div>
+
+		<script>
+			$(function() {
+
+				$("ul li").click(function() {
+					
+					
+					$(this).addClass("active").siblings().removeClass("active");
+					
+					$(".content").empty()
+
+					switch($(this).index()) {
+
+						case 0:
+							
+							$(".content").append("<ol><li>头条1</li><li>头条2</li><li>头条3</li></ol>");
+
+							break;
+
+						case 1:
+							
+							$(".content").append("<ol><li>体育1</li><li>体育2</li><li>体育3</li></ol>");
+							break;
+						case 2:
+							$(".content").append("<ol><li>娱乐1</li><li>娱乐2</li><li>娱乐3</li></ol>");
+							break;
+						default:
+							break;
+					}
+				})
+
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<select id="province">
+			<option value="1">安徽</option>
+			<option value="2">江苏</option>
+		</select>
+		<select id="city">
+			<option>合肥</option>
+			<option>芜湖</option>
+		</select>
+
+
+		<script>
+			
+			$(function(){
+				
+				//1.给第一个select添加监听事件
+				
+				//1.1change事件
+				
+				//2.根据用户的选择 判断选择的是哪一个option
+				
+				//2.1 text html val attr
+				
+				//3.根据用户的选择改变第二个select的option
+				//3.1匹配
+				//3.2清空原来的数据
+				//3.3append prepend数据
+				
+				
+				
+				$("#province").change(function(){
+					
+					var p = $("#province").val();
+					
+					switch (p){
+						case '2':
+							$("#city").empty();
+							
+							$("#city").append("<option>南京</option>");
+							$("#city").append("<option>苏州</option>");
+						
+							break;
+						case '1':
+							$("#city").empty()
+							$("#city").append("<option>安庆</option>");
+							$("#city").append("<option>池州</option>");
+							break;
+						default:
+							break;
+					}
+					
+				})
+			})
+			
+			
+		</script>
+
+	</body>
+
+</html>
