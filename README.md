@@ -1,2 +1,2 @@
-# html-css-bootstrap-learning
-HTML、CSS、jQuery、Ajax、Bootstrap基础知识学习
+# Web-learning
+HTML、CSS、JavaScript、jQuery、Ajax、Bootstrap、node.js 等知识学习
